@@ -7,7 +7,7 @@
 - 进阶：B：系统失效诊断
 - 工作分支：`main`
 - 上游题包：`Shiina413/ANTLab-Agent-Tasks`，基点 `b028d90f43f44585cf085a3f607516a94f485e88`
-- 最终 commit SHA：以提交后 `git rev-parse HEAD` 为准，见 `SUBMISSION.md`
+- 最终 commit SHA：`f393d5bdaed288f502fe046bf0d563302fa00223`（若后续真实 API 实验产生新提交，更新为最后登记版本）
 
 当前版本已完成基础题的 dry-run 请求构造和进阶 B 的离线复现、修复与回归。基础题 40 次真实 API 主请求因本地未配置 `ASSESSMENT_API_KEY` 尚未执行，未用 mock 结果冒充正式实验；配置方式见 `基础/config.example.json` 和 `SUBMISSION.md`。
 

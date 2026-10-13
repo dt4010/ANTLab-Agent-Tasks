@@ -6,7 +6,7 @@
 - 进阶选择：B
 - 最终分支：`main`
 - GitHub 仓库链接：Fork 后填写
-- 最终 commit SHA：最终推送后填写
+- 当前 commit SHA：`f393d5bdaed288f502fe046bf0d563302fa00223`
 - 简历：通过收集表提交，文件名为“姓名.pdf”，不放入本仓库
 
 ## API 配置
