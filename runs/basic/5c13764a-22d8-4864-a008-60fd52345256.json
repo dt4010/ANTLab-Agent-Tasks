@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "5c13764a-22d8-4864-a008-60fd52345256",
+  "utc": "2026-10-13T13:20:09.331440+00:00",
+  "case_id": "T01",
+  "split": "evaluation",
+  "condition": "K",
+  "variant": "baseline",
+  "mode": "dry",
+  "config": {
+    "provider": "填写服务商",
+    "endpoint": "https://YOUR_PROVIDER/v1/chat/completions",
+    "model": "填写实际模型标识",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 256
+    },
+    "timeout_seconds": 90
+  },
+  "data_sha256": "c37cda40ada89a18630dd7be098672f7e942e6f57e6199fe1aa2d6046e2b4961",
+  "dataset_version": "basic-context-v1.2",
+  "student_sha256": "c30c30a81df80e6a152c1767ed5623e6cdf4d21e78e1aa2b88f21cb33e86183f",
+  "original_passage_ids": [
+    "P555495",
+    "P130348"
+  ],
+  "selected_passage_ids": [
+    "P555495",
+    "P130348"
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "You answer document verification questions using only the evidence supplied by the user. Do not use outside knowledge. If the evidence is insufficient or conflicting, say so briefly. Return valid JSON only with exactly these fields: {\"answer\":\"short answer or evidence insufficient\",\"citations\":[\"passage-id\"]}. Citations must be IDs of passages that directly support the answer."
+    },
+    {
+      "role": "user",
+      "content": "Question:\n栖云项目R7版本在2026-02交付评审中确定的release_snapshot是什么？只输出快照编号。\n\nEvidence:\n[P555495] source=模拟记录/T01/页3\n栖云项目R7版本在2026-02的记录：交付评审QY71记录S23完成问答回归但缺坐标映射；S24完成问答、引用定位及冷启动恢复；S25的定位复核留三项未关闭问题。 来源栏包含资料页、采集日期和签署状态。页面只显示与本次请求快照相同的证据，引用可定位和内容得到支持分别记录。临时预热、正式批次、迁移批次采用各自的清单，数字之间不直接合并。 该记录保留批次编号、样本清单散列和负责人签名。复核者按固定输入重放，逐条保存原始响应、重试状态与引用位置；后续补录单列，不能覆盖第一次结果。耗时由客户端从提交请求计到读完响应，记录不含服务端排队拆分。 批次登记表标注生产、试运行与迁移三类用途；任务数量相似并不意味着能混用结果。每次替换模型或检索设置后，记录者保留旧配置散列，便于按真实执行版本重新计算。 每周核对本页行号、资料版本与签署记录。\n\n[P130348] source=模拟记录/T01/页5\n栖云项目R7版本在2026-02的迁移批次XQ54处理相近题目；该批次统计80项输入，64项得到支持，候选流程耗时为5.9秒，快照S19完成初步定位。 本页还记录版本升级后的回滚入口、会话恢复尝试和文档区域映射状态。摘要用于快速浏览，正式决定仍依据签署规则及原始检查项。只有项目、版本、窗口、批次一致的记录才能放在一次决策中比较。 执行环境登记客户端运行时、接口模式与日志保留策略。连续请求按输入顺序保存，每次返回的使用量按服务字段原样写入；缺失字段保持空白。复核记录会链接到当时的输入摘要和结果文件，便于后来核算。 质量复核表同时保存通过项、拒答项和异常项，避免只汇总有输出的请求。后续小范围修复可能改善其中一类错误，但只有原始输入和首次结果仍可访问，才方便判断改善来自哪里。 每周核对本页行号、资料版本与签署记录。"
+    }
+  ],
+  "input_characters": 1239,
+  "status": "dry_run",
+  "response": null,
+  "usage": null,
+  "elapsed_seconds": null
+}

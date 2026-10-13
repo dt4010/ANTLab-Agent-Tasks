@@ -1,0 +1,21 @@
+# 提交信息
+
+- 姓名：待填写
+- QQ：待填写
+- 方向：Agent
+- 进阶选择：B
+- 最终分支：`main`
+- GitHub 仓库链接：Fork 后填写
+- 最终 commit SHA：最终推送后填写
+- 简历：通过收集表提交，文件名为“姓名.pdf”，不放入本仓库
+
+## API 配置
+
+基础题真实调用需要在本机设置环境变量 `ASSESSMENT_API_KEY`，并复制 `基础/config.example.json` 为未提交的 `基础/config.local.json`，填写 HTTPS 兼容 Chat Completions endpoint 和 model。不要把 key、私有 endpoint 或个人账号信息写进仓库。
+
+## 最终提交前检查
+
+1. 运行 README 中的测试和 B 重放命令。
+2. 运行基础题真实实验，保留输入、原始响应、失败与重试。
+3. 更新 README 和本文件的分支、仓库链接、最终 SHA。
+4. 检查仓库访问权限和 PDF 简历大小不超过 5MB。

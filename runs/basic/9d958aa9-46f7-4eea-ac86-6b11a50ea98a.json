@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "9d958aa9-46f7-4eea-ac86-6b11a50ea98a",
+  "utc": "2026-10-13T13:20:09.064803+00:00",
+  "case_id": "D02",
+  "split": "dev",
+  "condition": "E",
+  "variant": "baseline",
+  "mode": "dry",
+  "config": {
+    "provider": "填写服务商",
+    "endpoint": "https://YOUR_PROVIDER/v1/chat/completions",
+    "model": "填写实际模型标识",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 256
+    },
+    "timeout_seconds": 90
+  },
+  "data_sha256": "c37cda40ada89a18630dd7be098672f7e942e6f57e6199fe1aa2d6046e2b4961",
+  "dataset_version": "basic-context-v1.2",
+  "student_sha256": "c30c30a81df80e6a152c1767ed5623e6cdf4d21e78e1aa2b88f21cb33e86183f",
+  "original_passage_ids": [
+    "P562395",
+    "P974958"
+  ],
+  "selected_passage_ids": [
+    "P562395",
+    "P974958"
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "You answer document verification questions using only the evidence supplied by the user. Do not use outside knowledge. If the evidence is insufficient or conflicting, say so briefly. Return valid JSON only with exactly these fields: {\"answer\":\"short answer or evidence insufficient\",\"citations\":[\"passage-id\"]}. Citations must be IDs of passages that directly support the answer."
+    },
+    {
+      "role": "user",
+      "content": "Question:\n青岚项目R6版本在2026-04夜间组使用的服务端GPU具体型号是什么？\n\nEvidence:\n[P562395] source=模拟记录/D02/页4\n批次QL62的复核补页：QL62台账登记服务区域zone-c、完整响应耗时与计费单位；资产、设备遥测与推理节点字段均未被采集。 执行环境登记客户端运行时、接口模式与日志保留策略。连续请求按输入顺序保存，每次返回的使用量按服务字段原样写入；缺失字段保持空白。复核记录会链接到当时的输入摘要和结果文件，便于后来核算。 登记系统保存字段定义和计算口径；百分比的分子分母都能追到清单行。数据在导出前经过一次格式检查，但格式检查通过并不意味着引文语义正确。人员复核与机器状态同时留在记录中。 页面记录打开原文的位置、对应的资料快照和检查状态。引用位置存在时仍可能出现内容不支持的回答，所以核对员保存了主张文本和证据原句；这些字段可在审阅报告中逐项追溯。 每周核对本页行号、资料版本与签署记录。\n\n[P974958] source=模拟记录/D02/页1\n青岚项目R6版本在2026-03的探索组采用24个临时问题，完整支持率为75%，一项耗时中位数为6.0秒。 登记系统保存字段定义和计算口径；百分比的分子分母都能追到清单行。数据在导出前经过一次格式检查，但格式检查通过并不意味着引文语义正确。人员复核与机器状态同时留在记录中。 资料表还登记文档快照、问题清单、检索候选数与人工反馈。检查员把格式错误、拒答和引用错误分列，遇到版本切换时重新核对实际使用的文档标识。一个批次的中位数不用于推断另一批次的首字延迟。 同一资料在多个视图中使用时，系统保留共同文档编号和各自页面位置。跨页引用由原始片段与映射关系组成；页面预览属于呈现数据，不能替代经过复核的文本内容。 每周核对本页行号、资料版本与签署记录。"
+    }
+  ],
+  "input_characters": 1161,
+  "status": "dry_run",
+  "response": null,
+  "usage": null,
+  "elapsed_seconds": null
+}

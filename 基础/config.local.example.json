@@ -1,0 +1,10 @@
+{
+  "provider": "your-provider",
+  "endpoint": "https://YOUR_PROVIDER/v1/chat/completions",
+  "model": "your-model",
+  "parameters": {
+    "temperature": 0,
+    "max_tokens": 256
+  },
+  "timeout_seconds": 90
+}

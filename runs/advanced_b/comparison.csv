@@ -1,0 +1,8 @@
+case_id,baseline_status,baseline_evidence,fixed_status,fixed_evidence,baseline_locator,fixed_locator,fixed_support
+R01,ok,b01,ok,b01,valid,valid,not_checked
+R02,ok,b01,ok,b02,valid,valid,not_checked
+R03,ok,,ok,b03,invalid,valid,not_checked
+R04,ok,b04,ok,b04,valid,valid,not_checked
+R05,ok,b05,ok,b05,valid,valid,not_checked
+R06,ok,b06,ok,b06,valid,valid,not_checked
+R07,ok,,invalid_scope,,invalid,invalid,not_checked

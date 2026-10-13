@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+基础/config.local.json
+.env
+*.key
+*.pem

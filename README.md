@@ -1,5 +1,28 @@
 # ANTLab Agent Tasks
 
+## 本次提交信息
+
+- 方向：Agent
+- 必做：基础题
+- 进阶：B：系统失效诊断
+- 工作分支：`main`
+- 上游题包：`Shiina413/ANTLab-Agent-Tasks`，基点 `b028d90f43f44585cf085a3f607516a94f485e88`
+- 最终 commit SHA：以提交后 `git rev-parse HEAD` 为准，见 `SUBMISSION.md`
+
+当前版本已完成基础题的 dry-run 请求构造和进阶 B 的离线复现、修复与回归。基础题 40 次真实 API 主请求因本地未配置 `ASSESSMENT_API_KEY` 尚未执行，未用 mock 结果冒充正式实验；配置方式见 `基础/config.example.json` 和 `SUBMISSION.md`。
+
+## 复现命令
+
+```powershell
+python -m unittest discover -s tests -v
+python 进阶/challenge_b/run_cases.py --output runs/advanced_b/baseline.json
+python 进阶/challenge_b/run_cases.py --engine fixed_engine:Engine --output runs/advanced_b/fixed.json
+python 基础/starter/runner.py --split dev --condition E --dry-run --config 基础/config.example.json --limit 4
+python 基础/starter/runner.py --split evaluation --condition all --dry-run --config 基础/config.example.json --limit 32
+```
+
+报告、决策记录、AI 声明和提交字段见 `report.md`、`decisions.md`、`declaration.md`、`SUBMISSION.md`。
+
 文档阅读与信息核验方向 Agent 项目的应用层开发者招募考核：先完成基础题，再从进阶 A/B/C 中选择一套完成。
 
 **截止时间：北京时间 2026 年 10 月 16 日 23:59（UTC+8）。**
