@@ -1,0 +1,9 @@
+{
+  "provider": "synapse-ai",
+  "endpoint": "https://synapse-ai.uk/v1/responses",
+  "model": "gpt-5.5",
+  "parameters": {
+    "max_output_tokens": 256
+  },
+  "timeout_seconds": 90
+}

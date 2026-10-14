@@ -10,7 +10,16 @@ def main():
             r=json.loads(path.read_text(encoding='utf-8')); row={k:r.get(k,'') for k in fields}
             row['model']=r.get('config',{}).get('model','');u=r.get('usage') or {}
             row['prompt_tokens']=u.get('prompt_tokens','');row['completion_tokens']=u.get('completion_tokens','')
-            try:row['content']=r['response']['choices'][0]['message']['content']
-            except (KeyError,TypeError,IndexError):row['content']=''
+            try:
+                row['content']=r['response']['choices'][0]['message']['content']
+            except (KeyError,TypeError,IndexError):
+                try:
+                    texts=[]
+                    for item in r['response'].get('output',[]):
+                        for content in item.get('content',[]):
+                            if content.get('type') in ('output_text','text') and isinstance(content.get('text'),str):
+                                texts.append(content['text'])
+                    row['content']='\n'.join(texts)
+                except (AttributeError,TypeError):row['content']=''
             w.writerow(row)
 if __name__=='__main__':main()
