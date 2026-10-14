@@ -26,7 +26,10 @@ def call_model(messages, config, mock=False):
     else:
         body={'model':config['model'],'messages':messages,'stream':False,**params}
     req=urllib.request.Request(endpoint, data=json.dumps(body,ensure_ascii=False).encode(),
-                               headers={'Content-Type':'application/json','Authorization':'Bearer '+key})
+                               headers={'Content-Type':'application/json',
+                                        'Accept':'application/json',
+                                        'User-Agent':'ANTLab-Agent-Assessment/1.0',
+                                        'Authorization':'Bearer '+key})
     start=time.perf_counter()
     try:
         with urllib.request.urlopen(req, timeout=float(config.get('timeout_seconds',90))) as response:

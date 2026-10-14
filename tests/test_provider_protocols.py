@@ -43,6 +43,8 @@ class ProviderProtocolTests(unittest.TestCase):
             captured["body"] = json.loads(request.data.decode("utf-8"))
             captured["url"] = request.full_url
             captured["timeout"] = timeout
+            captured["user_agent"] = request.get_header("User-agent")
+            captured["accept"] = request.get_header("Accept")
             return FakeResponse()
 
         config = {
@@ -60,6 +62,8 @@ class ProviderProtocolTests(unittest.TestCase):
         self.assertNotIn("messages", captured["body"])
         self.assertEqual(result["status"], "ok")
         self.assertEqual(result["response"]["id"], "resp_test")
+        self.assertEqual(captured["user_agent"], "ANTLab-Agent-Assessment/1.0")
+        self.assertEqual(captured["accept"], "application/json")
 
     def test_chat_completions_endpoint_keeps_messages_contract(self):
         provider = load_provider()

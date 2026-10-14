@@ -1,5 +1,5 @@
 # 基础题评分记录
 
-当前记录为 dry-run 结构检查，不作为真实模型质量结论。已验证：D01-D04 开发题的输入可构造；T01-T08 共 32 条 baseline 条件请求可构造；消息只包含 question 与传入 passages，并要求 JSON answer/citations。
+已完成真实模型运行。D01 开发题请求成功；T01-T08 共 32 条 baseline 有效主结果全部成功，另有 1 条网络传输失败记录并已单独重试成功；R0 共 8 条 improved 有效主结果全部成功。结果摘要见 `results/results.csv`，原始运行目录在本地忽略，不提交。
 
-正式 40 次主请求仍需在本机配置 `ASSESSMENT_API_KEY`、HTTPS endpoint 和 model 后执行。正式结果应在 `runs/basic/` 保存每次输入、原始响应、失败、重试和配置摘要，并在 `results/results.csv` 逐条记录 answer correctness、citation origin、support status、elapsed time。
+运行配置为 HTTPS Responses API，模型为 `gpt-5.6-sol`。中转站上游自动向 Responses 请求注入固定的 Codex 系统指令；该内容未进入项目请求体，但会出现在响应元数据中并占用输入 token。该外部干扰已记录，结果不宣称为无上游注入的纯净模型基准。`results/results.csv` 记录每条运行的状态、耗时、模型和输出；正确性与引用支持关系仍需人工复核。
