@@ -1,11 +1,11 @@
 # 提交信息
 
-- 姓名：待填写
-- QQ：待填写
+- 姓名：曹定禹
+- QQ：3392733594
 - 方向：Agent
 - 进阶选择：B
 - 最终分支：`main`
-- GitHub 仓库链接：Fork 后填写
+- GitHub 仓库链接：https://github.com/dt4010/ANTLab-Agent-Tasks
 - 可定位提交 SHA：`c0d26069d4593aeb30bc1cd82e814b9c48bc818f`
 - 简历：通过收集表提交，文件名为“姓名.pdf”，不放入本仓库
 
