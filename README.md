@@ -9,7 +9,7 @@
 - 上游题包：`Shiina413/ANTLab-Agent-Tasks`，基点 `b028d90f43f44585cf085a3f607516a94f485e88`
 - 可定位提交 SHA：`ca401a258b246a241866d2b1cd3e20b912ce5e8d`；当前提交包含真实评测汇总和 Responses API 兼容性修复。
 
-当前版本已完成基础题真实评测：baseline 32/32 次有效成功，improved 8/8 次有效成功；一次 transport_error 已保留并在重试中成功。结果摘要见 `results/results.csv`。上游 Responses 路由会自动注入固定系统指令，可能影响上下文与 token 用量，报告中已披露；原始运行记录和本地配置均不提交。
+当前版本已完成基础题真实评测：DeepSeek 官方 API 的 baseline 32/32 次有效成功，improved 8/8 次有效成功；一次 transport_error 已保留并在重试中成功。独立结果见 `results/deepseek_results.csv`。此前中转站结果保留在本地实验记录中，未作为干净基准混入 DeepSeek 结果；原始运行记录和本地配置均不提交。
 
 ## 复现命令
 

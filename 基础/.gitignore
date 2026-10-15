@@ -1,5 +1,6 @@
 runs/
 config.local.json
+config.deepseek.local.json
 .env
 __pycache__/
 *.pyc

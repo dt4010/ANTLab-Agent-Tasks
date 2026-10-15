@@ -11,7 +11,7 @@
 
 ## API 配置
 
-基础题真实调用需要在本机设置环境变量 `ASSESSMENT_API_KEY`，并使用未提交的 `基础/config.local.json`。本次实际使用 Responses API endpoint 和 `gpt-5.6-sol`。不要把 key、私有 endpoint 或个人账号信息写进仓库。
+基础题真实调用需要在本机设置环境变量 `ASSESSMENT_API_KEY`，并使用未提交的 `基础/config.deepseek.local.json`。本次干净基准使用 DeepSeek 官方 Chat Completions API 和 `deepseek-chat`；此前中转站结果仅作为历史实验记录。不要把 key、私有 endpoint 或个人账号信息写进仓库。
 
 ## 最终提交前检查
 

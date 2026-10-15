@@ -2,7 +2,7 @@
 
 ## 1. 完成概览
 
-方向为 Agent；完成基础题代码骨架、消息构造和改进证据排序，完成进阶 B 的原始故障复现、原因区分、最小修复、回归与变体。基础题已使用 HTTPS Responses API 完成真实运行：baseline 32/32 条有效主结果成功，improved 8/8 条有效主结果成功；一次 transport_error 已保留，并在独立重试中成功。没有用 mock 结果替代正式结果。
+方向为 Agent；完成基础题代码骨架、消息构造和改进证据排序，完成进阶 B 的原始故障复现、原因区分、最小修复、回归与变体。基础题已使用 DeepSeek 官方 HTTPS Chat Completions API 完成真实运行：baseline 32/32 条有效主结果成功，improved 8/8 条有效主结果成功；一次 transport_error 已保留，并在独立重试中成功。没有用 mock 结果替代正式结果。
 
 ## 2. 阅读与命题
 
