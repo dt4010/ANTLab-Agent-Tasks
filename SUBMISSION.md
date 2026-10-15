@@ -6,7 +6,7 @@
 - 进阶选择：B
 - 最终分支：`main`
 - GitHub 仓库链接：https://github.com/dt4010/ANTLab-Agent-Tasks
-- 可定位提交 SHA：`ca401a258b246a241866d2b1cd3e20b912ce5e8d`
+- 可定位提交 SHA：`ff265ac086b57a2bde38485727f2d1ccb2379f9d`
 - 简历：通过收集表提交，文件名为“姓名.pdf”，不放入本仓库
 
 ## API 配置
